@@ -1,0 +1,53 @@
+body {
+    background-color : #d5d5d5;
+}
+
+#guybrush {
+    position         : absolute;
+    top              : -10px;
+    left             : -40px;
+    background       : url('img/guybrush.png') no-repeat top center;
+    background-size  : contain;
+    width            : 500px;
+    height           : 500px;
+    animation        : swing 5s linear infinite;
+    transform-origin : top center;
+}
+
+#speech_bubble {
+    position       : relative;
+    top            : 120px;
+    left           : 330px;
+    width          : 550px;
+    padding        : 50px;
+    line-height    : 3.5rem;
+    text-align     : left;
+    font-weight    : 900;
+    font-size      : 2.5rem;
+    background     : #333;
+    color          : #fff;
+    border-radius  : 20px;
+    text-transform : uppercase;
+    letter-spacing : .5rem;
+}
+
+#speech_bubble:before {
+    content       : "";
+    width         : 0;
+    height        : 0;
+    position      : absolute;
+    border        : 20px solid #333;
+    border-left   : 20px solid transparent;
+    border-bottom : 20px solid transparent;
+    left          : -38px;
+    top           : 40px;
+}
+
+@keyframes swing {
+    25% {
+        transform : rotate(-2deg);
+    }
+    75% {
+        transform : rotate(1deg);
+    }
+}
