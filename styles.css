@@ -1,34 +1,38 @@
-body {
+html {
     background-color : #d5d5d5;
+    font-family      : 'Amatic SC', cursive;
+    font-size        : 16px;
 }
 
 #guybrush {
     position         : absolute;
-    top              : -10px;
-    left             : -40px;
+    top              : -0.5rem;
+    left             : -5rem;
     background       : url('img/guybrush.png') no-repeat top center;
     background-size  : contain;
-    width            : 500px;
-    height           : 500px;
+    width            : 31rem;
+    height           : 31rem;
     animation        : swing 5s linear infinite;
     transform-origin : top center;
 }
 
 #speech_bubble {
-    position       : relative;
-    top            : 120px;
-    left           : 330px;
-    width          : 550px;
-    padding        : 50px;
-    line-height    : 3.5rem;
-    text-align     : left;
-    font-weight    : 900;
-    font-size      : 2.5rem;
-    background     : #333;
-    color          : #fff;
-    border-radius  : 20px;
-    text-transform : uppercase;
-    letter-spacing : .5rem;
+    position         : relative;
+    top              : 8rem;
+    left             : 20rem;
+    width            : 30rem;
+    padding          : 2rem;
+    line-height      : 120%;
+    text-align       : left;
+    font-weight      : 700;
+    font-size        : 4rem;
+    background       : #333;
+    color            : #fff;
+    border-radius    : 20px;
+    text-transform   : uppercase;
+    letter-spacing   : .5rem;
+    animation        : swing 10s linear infinite;
+    transform-origin : top left;
 }
 
 #speech_bubble:before {
@@ -36,11 +40,11 @@ body {
     width         : 0;
     height        : 0;
     position      : absolute;
-    border        : 20px solid #333;
-    border-left   : 20px solid transparent;
-    border-bottom : 20px solid transparent;
-    left          : -38px;
-    top           : 40px;
+    border        : 1.5rem solid #333;
+    border-left   : 1.5rem solid transparent;
+    border-bottom : 1.5rem solid transparent;
+    left          : -2.5rem;
+    top           : 2.5rem;
 }
 
 @keyframes swing {
@@ -49,5 +53,11 @@ body {
     }
     75% {
         transform : rotate(1deg);
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    html {
+        font-size : 8px;
     }
 }
