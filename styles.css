@@ -1,6 +1,12 @@
+* {
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+}
+
 html {
     background-color : #d5d5d5;
-    font-family      : 'Amatic SC', cursive;
+    font-family      : 'Roboto', sans-serif;
     font-size        : 16px;
 }
 
@@ -24,6 +30,7 @@ html {
     padding          : 2rem;
     line-height      : 120%;
     text-align       : left;
+    font-family      : 'Amatic SC', cursive;
     font-weight      : 700;
     font-size        : 4rem;
     background       : #333;
@@ -47,6 +54,40 @@ html {
     top           : 2.5rem;
 }
 
+main {
+    position         : absolute;
+    right            : 0;
+    left             : 0;
+    bottom           : 0;
+    padding          : 4rem 10rem 2.5rem 2rem;
+    background-color : #222;
+    color            : #fff;
+    display          : flex;
+    justify-content  : end;
+}
+
+main a {
+    color           : #fff;
+    text-decoration : none;
+}
+
+main svg {
+    margin : 2rem 1rem 0 0;
+    fill   : currentColor;
+    width  : 3rem;
+    height : 3rem;
+}
+
+h1 {
+    font-size   : 3.5rem;
+    font-weight : 700;
+}
+
+h2 {
+    font-size   : 3rem;
+    font-weight : 100;
+}
+
 @keyframes swing {
     25% {
         transform : rotate(-2deg);
@@ -59,5 +100,11 @@ html {
 @media only screen and (max-width : 600px) {
     html {
         font-size : 8px;
+    }
+
+
+    main {
+        justify-content : start;
+        padding-right   : 2rem;
     }
 }
